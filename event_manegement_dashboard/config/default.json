@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://it18059878:it18059878@event-planning-bbrxu.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
