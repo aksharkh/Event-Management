@@ -12,7 +12,7 @@ const EventItem = ({ event }) => {
         deleteEvent(_id);
         clearCurrent();
     };
-
+    const displayType = type === 'professional' ? 'Open' : 'Closed';
     return (
         <div className='card bg-light'>
             <h3 className='text-primary text-left'>
@@ -24,7 +24,7 @@ const EventItem = ({ event }) => {
                         (type === 'professional' ? 'badge-success' : 'badge-primary')
                     }
                 >
-          {type.charAt(0).toUpperCase() + type.slice(1)}
+          {displayType}
         </span>
             </h3>
             <ul className='list'>

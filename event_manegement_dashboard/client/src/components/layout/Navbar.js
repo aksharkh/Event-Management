@@ -23,11 +23,11 @@ const Navbar = ({ title , icon }) => {
 
     const authLinks = (
         <Fragment>
-            <li>Hello { user && user.name }</li>
-            <li>
-                <a onClick={onLogout} href="#!">
+            <li className="nav-item">Hello, { user && user.name }   </li>
+            <li className="nav-item">
+                <button onClick={onLogout} className="btn btn-1">
                     <i className="fas fa-sign-out-alt"></i> <span className='hide-sm'>Logout</span>
-                </a>
+                </button>
             </li>
         </Fragment>
     );
@@ -35,17 +35,21 @@ const Navbar = ({ title , icon }) => {
     const guestLinks = (
         <Fragment>
             <li>
-                <Link to='/register'>Sign Up</Link>
+                <Link to='/register'>
+                    <button className="btn btn-1">Sign Up</button>
+                </Link>
             </li>
             <li>
-                <Link to='/login'>Sign In</Link>
+                <Link to='/login'>
+                    <button className="btn btn-1">Log In</button>
+                </Link>
             </li>
         </Fragment>
     );
 
     return (
         <div className="navbar bg-primary">
-            <h1><i className={icon}/> {title} </h1>
+            <h1><i className={icon}/>Hackaholics</h1>
             <ul>
                 { isAuthenticated ? authLinks : guestLinks }
             </ul>
@@ -59,7 +63,6 @@ Navbar.propTypes = {
 }
 
 Navbar.defaultProps = {
-    title : 'Event Planner',
     icon : 'fas fa-calendar-alt'
 }
 

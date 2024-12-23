@@ -15,7 +15,7 @@ const EventSchema = mongoose.Schema({
     },
     type: {
         type: String,
-        default: 'personal'
+        default: 'open'
     },
     date: {
         type: Date,

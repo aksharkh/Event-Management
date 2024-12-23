@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import EventContext from '../../context/event/eventContext';
 
-
 const EventForm = () => {
     const eventContext = useContext(EventContext);
 
@@ -15,7 +14,7 @@ const EventForm = () => {
                 name: '',
                 description: '',
                 startdatetime: '',
-                enddatetime:'',
+                enddatetime: '',
                 type: 'personal'
             });
         }
@@ -23,16 +22,15 @@ const EventForm = () => {
 
     const [event, setEvent] = useState({
         name: '',
-        description:'',
+        description: '',
         startdatetime: '',
-        enddatetime:'',
+        enddatetime: '',
         type: 'personal'
     });
 
     const { name, description, startdatetime, enddatetime, type } = event;
 
-    const onChange = e =>
-        setEvent({ ...event, [e.target.name]: e.target.value });
+    const onChange = e => setEvent({ ...event, [e.target.name]: e.target.value });
 
     const onSubmit = e => {
         e.preventDefault();
@@ -59,6 +57,7 @@ const EventForm = () => {
                 name='name'
                 value={name}
                 onChange={onChange}
+                required
             />
             <input
                 type='text'
@@ -66,6 +65,7 @@ const EventForm = () => {
                 name='description'
                 value={description}
                 onChange={onChange}
+                required
             />
             <h4>Event Start Date and Time</h4>
             <input
@@ -73,6 +73,7 @@ const EventForm = () => {
                 name='startdatetime'
                 value={startdatetime}
                 onChange={onChange}
+                required
             />
             <h4>Event End Date and Time</h4>
             <input
@@ -80,16 +81,9 @@ const EventForm = () => {
                 name='enddatetime'
                 value={enddatetime}
                 onChange={onChange}
+                required
             />
-            <h4>Event Type</h4>
-            <input
-                type='radio'
-                name='type'
-                value='personal'
-                checked={type === 'personal'}
-                onChange={onChange}
-            />{' '}
-            Personal Event{' '}
+            <h5>Event Type</h5>
             <input
                 type='radio'
                 name='type'
@@ -97,7 +91,16 @@ const EventForm = () => {
                 checked={type === 'professional'}
                 onChange={onChange}
             />{' '}
-            Professional Event
+            Open
+            <input
+                type='radio'
+                name='type'
+                value='personal'
+                checked={type === 'personal'}
+                onChange={onChange}
+            />{' '}
+            Closed{' '}
+           
             <div>
                 <input
                     type='submit'

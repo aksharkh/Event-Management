@@ -16,6 +16,7 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
+
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
     app.get('*', (req, res) =>

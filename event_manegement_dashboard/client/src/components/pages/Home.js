@@ -5,6 +5,8 @@ import EventForm from '../events/EventForm';
 import EventFilter from '../events/EventFilter';
 
 import AuthContext from '../../context/auth/authContext';
+import TaskTracker from '../tasks/TaskTracker';
+import AttendeeManagement from '../attendees/AttendeeManagement';
 
 const Home = () => {
     const authContext = useContext(AuthContext);
@@ -25,6 +27,11 @@ const Home = () => {
                 <EventFilter />
                 <Events />
             </div>
+            <div className='vertical-gap'>
+                <AttendeeManagement />
+                <TaskTracker />
+            </div>
+            
         </div>
     );
 };

@@ -182,7 +182,9 @@ img {
   grid-template-columns: 2fr 3fr;
   grid-gap: 2rem;
 }
-
+.nav-item {
+  margin-right: 20px; 
+}
 .btn {
   display: inline-block;
   background: var(--light-color);
@@ -230,10 +232,17 @@ img {
   background: var(--light-color);
   color: #333;
 }
-
+.badge-primary{
+  background: var(--danger-color);
+  color: #fff;
+}
+.btn-1{
+  border-radius: 10px;
+  background-color: #fff;
+  color: #070abc;
+}
 .btn-primary,
 .bg-primary,
-.badge-primary,
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
@@ -440,3 +449,7 @@ table th {
     justify-content: center;
   }
 }
+.vertical-gap > * {
+  margin-bottom: 60px;
+}
+

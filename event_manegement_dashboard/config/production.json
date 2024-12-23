@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://it18059878:it18059878@event-planning-bbrxu.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://aksharkh04:guDGmhpRMdVRFA71@cluster0.i5a7w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
   "jwtSecret": "secret"
 }
