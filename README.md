@@ -7,7 +7,7 @@
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/<your-username>/<your-repo-name>.git](https://github.com/aksharkh/Event-Management.git
+   git clone https://github.com/aksharkh/Event-Management.git
    cd event_manegement_dashboard
    ```
 
